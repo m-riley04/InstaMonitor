@@ -2,9 +2,7 @@ from followlist import FollowList
 import os
 
 def main():
-    # Check that we have a checks directory for storing saves
-    if (not os.path.exists(f"{os.getcwd()}\\checks")):
-        os.mkdir(f"{os.getcwd()}\\checks")
+    
         
     # Initialize FollowList object
     listPath = "list.txt"
