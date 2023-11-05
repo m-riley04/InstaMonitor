@@ -71,8 +71,15 @@ class FollowList:
         # Return dictionary
         return { "unfollowed": unfollowed, "followed": followed }
     
+    def compare_newest():
+        """Compares the followlist to the most recent previously saved list"""
+        
+    
     def save(self):
         """Saves the list of followers to a more readable file with a date"""
+        # Check that we have a checks directory for storing saves
+        if (not os.path.exists(f"{os.getcwd()}\\checks")):
+            os.mkdir(f"{os.getcwd()}\\checks")
         date = datetime.datetime.now().strftime("%Y-%m-%d--%H-%M-%S")
         file = open(f"{os.getcwd()}\\checks\\{date}.txt", 'w', encoding='utf8')
         for follower in self.followers:
